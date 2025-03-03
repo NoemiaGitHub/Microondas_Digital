@@ -362,6 +362,7 @@ namespace MicroondasDigital
                     {
                         potencia = 10;
                         txtPotencia.Text = "10";
+                        txtPotencia.ForeColor = Color.Lime;
                     }
                     else if (!int.TryParse(txtPotencia.Text, out potencia) || potencia < 1 || potencia > 10)
                     {
@@ -484,6 +485,7 @@ namespace MicroondasDigital
                     txtTempo.Enabled = false; // Desabilita o campo de tempo
                     txtPotencia.Enabled = false; // Desabilita o campo de potência
                     txtTempo.ForeColor = Color.Lime;
+                    txtPotencia.ForeColor = Color.Lime;
                 }
                 else
                 {
@@ -500,6 +502,7 @@ namespace MicroondasDigital
                         txtTempo.Enabled = true;  // Habilita o campo de tempo
                         txtPotencia.Enabled = true;  // Habilita o campo de potência
                         txtTempo.ForeColor = Color.Lime;
+                        txtPotencia.ForeColor = Color.Lime;
                     }
                 }
             }

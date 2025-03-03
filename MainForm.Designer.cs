@@ -56,6 +56,7 @@ namespace MicroondasDigital
             // 
             // txtPotencia
             // 
+            this.txtPotencia.BackColor = System.Drawing.Color.Black;
             this.txtPotencia.Location = new System.Drawing.Point(314, 113);
             this.txtPotencia.Name = "txtPotencia";
             this.txtPotencia.Size = new System.Drawing.Size(100, 20);
