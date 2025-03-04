@@ -25,26 +25,11 @@ public class ConexaoDB
         {
             try
             {
-                // Conectar ao SQL Server sem especificar um banco de dados para verificar a existência do banco
+                // Conectar ao SQL Server sem especificar um banco de dados para criar o banco de dados
                 using (var connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Integrated Security=True;"))
                 {
                     connection.Open();
-
-                    // Verificar se o banco de dados já existe
-                    var verificaBancoQuery = "SELECT database_id FROM sys.databases WHERE name = 'MicroondasDB'";
-                    using (var command = new SqlCommand(verificaBancoQuery, connection))
-                    {
-                        var result = command.ExecuteScalar();
-                        if (result != DBNull.Value)
-                        {
-                            // O banco de dados já existe, então não tentaremos criá-lo novamente
-                            MessageBox.Show("O banco de dados já existe.");
-                            return;
-                        }
-                    }
-
-                    // Caso o banco não exista, criá-lo
-                    using (var command = new SqlCommand($"CREATE DATABASE [MicroondasDB] ON (NAME = MicroondasDB, FILENAME = '{dbPath}')", connection))
+                    using (var command = new SqlCommand($"CREATE DATABASE [MicroondasDB] ON (NAME = N'MicroondasDB', FILENAME = '{dbPath}')", connection))
                     {
                         command.ExecuteNonQuery();
                     }
@@ -63,6 +48,7 @@ public class ConexaoDB
         }
     }
 
+
     // Método para criar a tabela 'Programas', se necessário
     private void CriarTabelaSeNecessario()
     {
@@ -72,15 +58,15 @@ public class ConexaoDB
             {
                 connection.Open();
                 string query = @"IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Programas' AND xtype='U')
-                                CREATE TABLE Programas (
-                                    Id INT IDENTITY(1,1) PRIMARY KEY,
-                                    Nome NVARCHAR(100) NOT NULL,
-                                    Alimento NVARCHAR(100) NOT NULL,
-                                    CadPotencia INT NOT NULL,
-                                    Caractere NVARCHAR(10) NOT NULL,
-                                    CadTempo INT NOT NULL,
-                                    InstrucoesII NVARCHAR(MAX) NULL
-                                );";
+                            CREATE TABLE Programas (
+                                Id INT IDENTITY(1,1) PRIMARY KEY,
+                                Nome NVARCHAR(100) NOT NULL,
+                                Alimento NVARCHAR(100) NOT NULL,
+                                CadPotencia INT NOT NULL,
+                                Caractere NVARCHAR(10) NOT NULL,
+                                CadTempo INT NOT NULL,
+                                InstrucoesII NVARCHAR(MAX) NULL
+                            );";
                 using (var command = new SqlCommand(query, connection))
                 {
                     command.ExecuteNonQuery();
@@ -92,6 +78,7 @@ public class ConexaoDB
             MessageBox.Show($"Erro ao criar tabela: {ex.Message}");
         }
     }
+
 
     // Método para obter todos os programas armazenados no banco de dados
     public List<CadastrarProgramaAquecimento> ObterTodosProgramas()
