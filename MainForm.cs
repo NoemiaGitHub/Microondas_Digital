@@ -343,7 +343,7 @@ namespace MicroondasDigital
                 }
                 else
                 {
-                    // 🔹 Se nenhum tempo for informado, aplica o "Início Rápido" (30s)
+                    // Se nenhum tempo for informado, aplica o "Início Rápido" (30s)
                     if (string.IsNullOrWhiteSpace(txtTempo.Text) || txtTempo.Text == placeholderTempo)
                     {
                         tempo = 30;
@@ -357,7 +357,7 @@ namespace MicroondasDigital
                         return;
                     }
 
-                    // 🔹 Se nenhuma potência for informada, aplica 10 como padrão
+                    //Se nenhuma potência for informada, aplica 10 como padrão
                     if (string.IsNullOrWhiteSpace(txtPotencia.Text) || txtPotencia.Text == placeholderPotencia)
                     {
                         potencia = 10;
@@ -375,7 +375,7 @@ namespace MicroondasDigital
             aquecendo = true;
             tempoRestante = tempo;
 
-            // 🔹 Atualiza a string de aquecimento baseada no tempo e potência
+            // Atualiza a string de aquecimento baseada no tempo e potência
             stringAquecimento.Clear();
             for (int i = 0; i < tempo; i++)
             {
