@@ -46,7 +46,7 @@ A proposta enfatiza a implementação correta das funcionalidades do micro-ondas
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/microondas-digital.git
+   git@github.com:NoemiaGitHub/Microondas_Digital.git
    ```
 2. Abra o projeto no **Visual Studio**
 3. Certifique-se de que o **SQL Server Express** está instalado e configurado corretamente
