@@ -2,7 +2,11 @@
 
 ## Descrição
 
-Este projeto é uma avaliação de desenvolvedor de software que tem como objetivo implementar um **micro-ondas digital** seguindo princípios de **orientação a objetos** e boas práticas de desenvolvimento. O projeto foi desenvolvido até o **nível 3** dos requisitos propostos.
+![Interface do Micro-ondas Digital](docs/foto_micro_readme.png)
+
+Este projeto foi desenvolvido como parte de uma avaliação para **desenvolvedor de software**, com o objetivo de programar um **micro-ondas digital** utilizando **orientação a objetos**, separação de camadas e boas práticas de código. A avaliação foi estruturada em **quatro níveis de dificuldade**, e este projeto atendeu até o **nível 3** dos requisitos.
+
+A proposta enfatiza a implementação correta das funcionalidades do micro-ondas, incluindo entrada de tempo e potência, programas pré-definidos, persistência de dados e manipulação de processos em tempo real, sem a necessidade de priorizar o design da interface gráfica. O projeto foi desenvolvido em **C# e .NET Framework**, seguindo princípios **SOLID** e utilizando **SQL Server Express** para armazenar programas de aquecimento customizados.
 
 ## Tecnologias Utilizadas
 
