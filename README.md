@@ -70,6 +70,6 @@ Este projeto está licenciado sob a licença **MIT**. Para mais detalhes, consul
 
 ---
 
-**Desenvolvido por:** Noemia Jordania
+**Desenvolvido por:** NoemiaGitHub
 
 
