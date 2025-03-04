@@ -462,6 +462,8 @@ namespace MicroondasDigital
             foreach (var programa in programasCustomizados)
             {
                 cmbProgramas.Items.Add(programa.Nome); // Adiciona os programas customizados ao ComboBox
+                cmbProgramas.DrawMode = DrawMode.OwnerDrawFixed;
+                cmbProgramas.DrawItem += new DrawItemEventHandler(cmbProgramas_DrawItem);
             }
 
             cmbProgramas.SelectedIndexChanged += cmbProgramas_SelectedIndexChanged;
@@ -595,6 +597,27 @@ namespace MicroondasDigital
                 txtTempo.ForeColor = Color.Lime;
             }
         }
+
+        private void cmbProgramas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            ComboBox cmb = (ComboBox)sender;
+            string itemText = cmb.Items[e.Index].ToString();
+
+            // Verifica se é um programa customizado
+            bool isCustomizado = repositorio.ObterTodosProgramas().Any(p => p.Nome == itemText);
+
+            // Configura a cor e a fonte
+            Font fonte = isCustomizado ? new Font(e.Font, FontStyle.Italic) : new Font(e.Font, FontStyle.Regular);
+            Brush brush = new SolidBrush(e.ForeColor);
+
+            // Define o fundo do item
+            e.DrawBackground();
+            e.Graphics.DrawString(itemText, fonte, brush, e.Bounds);
+            e.DrawFocusRectangle();
+        }
+
 
         private void txtTempo_Click(object sender, EventArgs e)
         {
