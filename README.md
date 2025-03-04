@@ -2,7 +2,7 @@
 
 ## Descrição
 
-![Interface do Micro-ondas Digital](docs/foto_micro_readme.png)
+![Interface do Micro-ondas Digital](docs/Interface Microondas Digital.PNG)
 
 Este projeto foi desenvolvido como parte de uma avaliação para **desenvolvedor de software**, com o objetivo de programar um **micro-ondas digital** utilizando **orientação a objetos**, separação de camadas e boas práticas de código. A avaliação foi estruturada em **quatro níveis de dificuldade**, e este projeto atendeu até o **nível 3** dos requisitos.
 
