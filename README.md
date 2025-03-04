@@ -56,7 +56,7 @@ A proposta enfatiza a implementação correta das funcionalidades do micro-ondas
 
 Os requisitos do projeto foram definidos em um documento de avaliação. Para acessar o documento completo, incluindo os **4 níveis**, acesse o arquivo abaixo:
 
-📄 [Documento de Avaliação](docs/avaliacao.pdf)
+📄 [Documento de Avaliação](docs/avaliacao_orientao_objeto_-_web_microondas.pdf)
 
 ## Possíveis Melhorias (Nível 4)
 
