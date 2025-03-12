@@ -8,9 +8,8 @@ namespace MicroondasDigital
 {
     internal static class Program
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+       /// Ponto de entrada principal para o aplicativo .
+        /// </NJS>
         [STAThread]
         static void Main()
         {
