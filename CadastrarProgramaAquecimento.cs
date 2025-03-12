@@ -14,10 +14,10 @@ namespace MicroondasDigital
         public string InstrucoesII { get; set; }
         public string StringAquecimento { get; set; }
 
-        // Construtor sem parâmetros
+        // Construtor sem parâmetros M
         public CadastrarProgramaAquecimento() { }
 
-        // Construtor com 7 parâmetros
+        // Construtor com 7 parâmetros I
         public CadastrarProgramaAquecimento(string nome, string alimento, int cadPotencia, string caractere, int cadTempo, string instrucoesII, string stringAquecimento)
         {
             Nome = nome;
@@ -29,7 +29,7 @@ namespace MicroondasDigital
             StringAquecimento = stringAquecimento;
         }
 
-        // Construtor com 6 parâmetros
+        // Construtor com 6 parâmetros A
         public CadastrarProgramaAquecimento(string nome, string alimento, int cadPotencia, string caractere, int cadTempo, string instrucoesII)
         {
             Nome = nome;
